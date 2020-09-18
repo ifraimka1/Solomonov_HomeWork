@@ -1,0 +1,49 @@
+//КТбо1-4 | Соломонов Ифраим | Задание №3 = Есть 4 выключателя. С помощью битовой маски закодировать состояние всех 4х выключателей. Вывести состояние этих выключателей..
+//Программа принимает 4 числа, которые переключают (или нет) выключатели.
+//Программа будет предлагать вводить данные, пока вы не введёте число 2, чтобы остановить её.
+//Если ввести 1, то вы переключите выключатель. Если ввести 0, то состояние выключателя не изменится.
+//При вводе других чисел программа выдаст соответствующее сообщение и прекратит свою работу.
+//Формат входных данных: 1 1 0 1 (вводить числа нужно с новой строки) (слева - 1й выключатель, справа - 4й).
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	int k1, k2, k3, k4;
+	int all[] = { 0, 0, 0, 0 };
+
+	cout << "All keys are off now." << endl;
+	cout << "You can switch keys or finish this program." << endl;
+
+	while (true) {
+		cin >> k1;
+		if (k1 == 2) break;
+		cin >> k2 >> k3 >> k4;
+		//Проверка корректности вводных данных
+		if (((k1 != 0) && (k1 != 1)) || ((k2 != 0) && (k2 != 1)) || ((k3 != 0) && (k3 != 1)) || ((k4 != 0) && (k4 != 1))) {
+			cout << "Input error.";
+		}
+		else {
+			if (k1 == 1) all[0] ^= k1;
+			if (k2 == 1) all[1] ^= k2;
+			if (k3 == 1) all[2] ^= k3;
+			if (k4 == 1) all[3] ^= k4;
+
+			if (all[0] == 1) cout << "Key 1 is ON" << endl;
+			else cout << "Key 1 is OFF" << endl;
+
+			if (all[1] == 1) cout << "Key 2 is ON" << endl;
+			else cout << "Key 2 is OFF" << endl;
+
+			if (all[2] == 1) cout << "Key 3 is ON" << endl;
+			else cout << "Key 3 is OFF" << endl;
+
+			if (all[3] == 1) cout << "Key 4 is ON" << endl;
+			else cout << "Key 4 is OFF" << endl;
+
+			cout << endl << "You can switch keys again or finish this program" << endl;
+		}
+	}
+	cout << "Program is finished." << endl;
+	return 0;
+}

@@ -1,0 +1,19 @@
+//Задание 1. Вводится 2 числа. Если первое число больше, вывести 1, иначе вывести 0.
+#include <iostream>
+using namespace std;
+
+int main() {
+	int a1, a2, res;
+
+	cout << "Enter 2 numbers" << endl;
+	cin >> a1 >> a2;
+
+	if (a1 >= a2) {
+		res = a1;
+	}
+	else {
+		res = a2;
+	}
+
+	cout << "The biggest number is: " << res << endl;
+}

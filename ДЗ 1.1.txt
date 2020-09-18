@@ -1,0 +1,16 @@
+//КТбо1-4 | Соломонов Ифраим | Задание №1 = ввести два числа, вывести их сумму.
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	int v1, v2, sum;
+
+
+	cout << "Enter two numbers, please." << endl;
+	cin >> v1 >> v2;
+	sum = v1 + v2;
+	cout << "The sum of these numbers is: " << sum << endl;
+
+	return 0;
+}

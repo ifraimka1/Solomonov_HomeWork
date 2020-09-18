@@ -1,0 +1,15 @@
+//Задание 4. Вводятся 2 числа: a и b. Вывести на экран в столбик все числа от 0 до a, кратные b.
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	int a, b, res;
+
+	cout << "Enter 2 numbers" << endl;
+	cin >> a >> b;
+
+	for (int i = 0; i < a; i += b) {
+		cout << i << endl;
+	}
+}
